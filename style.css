@@ -1,0 +1,90 @@
+* {
+    /* margin: 3px; */
+    font-size: 1vw;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: 1px;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    margin-left: 1%;
+    font-size: 2vw;
+}
+
+/* Grid___________________Grid____________________Grid */
+
+.lt-grid-container {
+    background-color: darkcyan;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "Header" "GridContainer";
+    padding: 1%;
+    grid-gap: 1%;
+}
+
+.lt-Header {
+    background-color: darkorchid;
+    grid-area: Header;
+    height: 10%;
+}
+
+.lt-GridContainer {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "LeftSide Sensors";
+    grid-area: GridContainer;
+    grid-gap: 1%;
+}
+
+.lt-Sensors {
+    background-color: gold;
+    grid-area: Sensors;
+}
+
+.lt-LeftSide {
+    background-color: navajowhite;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "MapArea" "FreeSpace";
+    grid-area: LeftSide;
+    grid-gap: 1%;
+}
+
+.lt-MapArea {
+    background-color: orangered;
+    grid-area: MapArea;
+    grid-gap: 1%;
+}
+
+#mapid {
+    height: 400px;
+    width:600px;
+}
+
+.lt-FreeSpace {
+    background-color: peru;
+    grid-area: FreeSpace;
+    grid-gap: 1%;
+}
+
+/* div:not(.lt-Header):not(.lt-LeftSide):not(.lt-MapArea):hover {
+    background-image: radial-gradient(rgb(255, 255, 255), rgb(62, 68, 62));
+    background-repeat: no-repeat;
+    transition: 300ms ease-in-out;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.50); */
+}
